@@ -2,20 +2,14 @@
 
 #if defined(WIN32)
 #include <windows.h>
-/**
- * @brief
- * Windows doesn't support UTF8 characters
- * the macro 'ENABLE_UTF8_OUTPUT()' will
- * configure console if necessary.
- */
+
+/// Windows doesn't support UTF8 characters the macro 'ENABLE_UTF8_OUTPUT()'
+/// will configure console if necessary.
 #define ENABLE_UTF8_OUTPUT() SetConsoleOutputCP(CP_UTF8)
 #else
-/**
- * @brief
- * Windows doesn't support UTF8 characters
- * the macro 'ENABLE_UTF8_OUTPUT()' will
- * configure console if necessary.
- */
+
+/// Windows doesn't support UTF8 characters the macro 'ENABLE_UTF8_OUTPUT()'
+/// will configure console if necessary.
 #define ENABLE_UTF8_OUTPUT()
 #endif
 
