@@ -1,5 +1,6 @@
-#include "string_system.hpp"
-#include "string_utils.hpp"
+#include "colors.h"
+#include "string_system.h"
+#include "string_utils.h"
 
 #include <iostream>
 #include <vector>
@@ -38,6 +39,7 @@ int main()
                       " -Wextra -Werror -Wno-uninitialized -Wno-sign-compare"
                       "-Wshadow program.cc -o .exe");
     } catch (const string& compilation_error) {
+        cout << COLOR_RED "   ---   Compilation Error   ---" DEFAULT_COLOR << endl;
         cout << compilation_error;
         return 1;
     }
